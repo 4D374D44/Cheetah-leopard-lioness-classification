@@ -1,8 +1,8 @@
 clear all
 close all
 
-load('Out.mat');
-data = dataN;
+load('Out.mat'); % load the prepared grey dataset
+data = dataN; % copy the dataN variable that contains the dataset to ram
 [dataRow, dataCol] = size(data);
 
 prompt = {'Which column(s) are inputs','Which column(s) are outputs','% For Testing','How many nodes in hidden layer','Number of Iterations'};
@@ -137,4 +137,5 @@ figure(3);
 h=histogram(var_bCat);
 % accuracy=(h.Values(1)+h.Values(3))/20
 accuracy=(h.Values(1)+h.Values(3)+h.Values(4))/(tstSize)*100
+
 
